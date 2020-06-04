@@ -1,1 +1,72 @@
-<p>cart works!</p>
+<img src="assets/images/bg_3.jpg" class="img-fluid" alt="Responsive image">
+
+<section class="ftco-section ftco-cart">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-12 ftco-animate ftco-animated fadeInUp">
+            <div class="cart-list">
+                <table class="table">
+                    <thead class="thead-primary">
+                      <tr class="text-center">
+                        <th>&nbsp;</th>
+                        <th>&nbsp;</th>
+                        <th>Productos</th>
+                        <th>Precios</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="text-center" *ngFor="let item of cart">
+                        <td class="product-remove"><a href="#"><span class="icon-close"></span></a></td>
+                        
+                        <td class="image-prod"><div class="img" style="background-image:url(assets/images/bebidas/{{item.imagen}});"></div></td>
+                        
+                        <td class="product-name">
+                            <h3>{{item.nombre}}</h3>
+                            <p>Far far away, behind the word mountains, far from the countries</p>
+                        </td>
+                        
+                        <td class="price">${{item.precio}}</td>
+                        
+                        <td class="quantity">
+                            <div class="input-group mb-3">
+                             <input type="text" name="quantity" class="quantity form-control input-number" [value]="item.cant" min="1" max="100">
+                          </div>
+                      </td>
+                        
+                        <td class="total">${{item.precio * item.cant}}</td>
+                      </tr><!-- END TR-->
+
+                    </tbody>
+                  </table>
+              </div>
+        </div>
+    </div>
+    <div class="row justify-content-end">
+        <div class="col col-lg-3 col-md-6 mt-5 cart-wrap ftco-animate ftco-animated fadeInUp">
+            <div class="cart-total mb-3">
+                <h3>Total del carrito</h3>
+                <p class="d-flex">
+                    <span>Subtotal</span>
+                    <span>$2140</span>
+                </p>
+                <p class="d-flex">
+                    <span>Delivery</span>
+                    <span>$100</span>
+                </p>
+                <p class="d-flex">
+                    <span>Descuentos</span>
+                    <span color="red">-$120</span>
+                </p>
+                <hr>
+                <p class="d-flex total-price">
+                    <span>Total</span>
+                    <span>$2120</span>
+                </p>
+            </div>
+            <p class="text-center"><a href="checkout.html" class="btn btn-primary py-3 px-4">Proceder a la compra</a></p>
+        </div>
+    </div>
+    </div>
+</section>

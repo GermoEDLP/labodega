@@ -1,10 +1,17 @@
 <nav
   class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
   id="ftco-navbar"
-  style="background-color: rgba(0, 0, 0, 0.25) !important;"
 >
   <div class="container">
-    <a class="navbar-brand" href="index.html">La Bodega<small>bebidas</small></a>
+    <a
+      class="navbar-brand"
+      [routerLink]="['/home']"
+    >
+      La Bodega
+
+      <small>bebidas</small>
+    </a>
+
     <button
       class="navbar-toggler"
       type="button"
@@ -14,43 +21,108 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      <span class="oi oi-menu"></span> Menu
+      <span class="oi oi-menu"></span>
+      Menu
     </button>
-    <div class="collapse navbar-collapse" id="ftco-nav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a href="index.html" class="nav-link">Inicio</a>
+
+    <div
+      class="collapse navbar-collapse"
+      id="ftco-nav"
+    >
+      <ul class="navbar-nav ml-auto"> 
+        <li class="nav-item">
+          <a
+            [routerLink]="['/home']"
+            routerLinkActive="active"
+            class="nav-link"
+          >Inicio</a>
         </li>
-        <li class="nav-item"><a href="menu.html" class="nav-link">Nosotros</a></li>        
-        
+
+        <li class="nav-item">
+          <a
+            [routerLink]="['/about']"
+            routerLinkActive="active"
+            class="nav-link"
+          >Nosotros</a>
+        </li>
+
         <li class="nav-item dropdown">
-            <a
+          <a
             class="nav-link dropdown-toggle"
-            href="room.html"
+            routerLinkActive="active"
             id="dropdown04"
             data-toggle="dropdown"
             aria-haspopup="true"
             aria-expanded="false"
-            >Productos</a
-            >
-            <div class="dropdown-menu" aria-labelledby="dropdown04">
-                <a class="dropdown-item" href="shop.html">Todos</a>
-                <a class="dropdown-item" href="shop.html">Vinos</a>
-                <a class="dropdown-item" href="product-single.html">Cervezas</a>
-                <a class="dropdown-item" href="room.html">Bebidas blancas</a>
-                <a class="dropdown-item" href="checkout.html">Whisky's</a>
-                <a class="dropdown-item" href="checkout.html">Otros</a>
-            </div>
-        </li>
-        <li class="nav-item"><a href="blog.html" class="nav-link">Servicios</a></li>
-      
-        <li class="nav-item cart">
-          <a href="cart.html" class="nav-link"
-            ><span class="icon icon-shopping_cart"></span
-            ><span class="bag d-flex justify-content-center align-items-center"
-              ><small>5</small></span
-            ></a
+          >Productos</a>
+
+          <div
+            class="dropdown-menu"
+            aria-labelledby="dropdown04"
           >
+            <a
+              class="dropdown-item"
+              [routerLink]="['/products']"
+            >Todos</a>
+
+            <a
+              class="dropdown-item"
+              [routerLink]="['/products']"
+            >Vinos</a>
+
+            <a
+              class="dropdown-item"
+              [routerLink]="['/products']"
+            >Cervezas</a>
+
+            <a
+              class="dropdown-item"
+              [routerLink]="['/products']"
+            >Bebidas blancas</a>
+
+            <a
+              class="dropdown-item"
+              [routerLink]="['/products']"
+            >Whisky's</a>
+
+            <a
+              class="dropdown-item"
+              [routerLink]="['/products']"
+            >Otros</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a
+            [routerLink]="['/services']"
+            routerLinkActive="active"
+            class="nav-link"
+          >Servicios</a>
+        </li>
+
+        <li class="nav-item cart">
+          <a
+            [routerLink]="['/cart']"
+            routerLinkActive="active"
+            class="nav-link"
+          >
+          <i class='bx bx-cart-alt' style="font-size: 20px;"></i>
+
+            <span class="bag d-flex justify-content-center align-items-center">
+              <small>5</small>
+            </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            [routerLink]="['/cart']"
+            routerLinkActive="active"
+            class="nav-link"
+          >
+          <i class='bx bx-user' (click)="open()" style="font-size: 20px;"></i>
+
+            
+          </a>
         </li>
       </ul>
     </div>

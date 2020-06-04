@@ -1,1 +1,79 @@
-<p>products works!</p>
+<img src="assets/images/bg_2.jpg" class="img-fluid" alt="Responsive image">
+
+<section class="ftco-section">
+    <div class="container">
+    <div class="row">
+
+        <div class="col-md-6 mb-5 pb-3">
+            <h3 class="mb-5 heading-pricing ftco-animate ftco-animated fadeInUp">Vinos</h3>
+            
+            <div class="pricing-entry d-flex ftco-animate ftco-animated fadeInUp" *ngFor="let vino of productos['vinos']">
+                <div class="img" style="background-image: url(assets/images/bebidas/alma.jpg);"></div>
+                <div class="desc pl-3">
+                    <div class="d-flex text align-items-center">
+                        <h3><span>{{vino.nombre}}</span></h3>
+                        <span class="price">${{vino.precio}}</span>
+                    </div>
+                    <div class="d-block">
+                        <p>A small river named Duden flows by their place and supplies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-5 pb-3">
+            <h3 class="mb-5 heading-pricing ftco-animate ftco-animated fadeInUp">Cervezas</h3>
+           
+            <div class="pricing-entry d-flex ftco-animate ftco-animated fadeInUp" *ngFor="let item of productos['cervezas']">
+                <div class="img" style="background-image: url(assets/images/bebidas/otro.jpg);"></div>
+                <div class="desc pl-3">
+                    <div class="d-flex text align-items-center">
+                        <h3><span>{{item.nombre}}</span></h3>
+                        <span class="price">${{item.precio}}</span>
+                    </div>
+                    <div class="d-block">
+                        <p>A small river named Duden flows by their place and supplies</p>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+
+        <div class="col-md-6">
+            <h3 class="mb-5 heading-pricing ftco-animate ftco-animated fadeInUp">Bebidas blancas</h3>
+
+            <div class="pricing-entry d-flex ftco-animate ftco-animated fadeInUp"  *ngFor="let item of productos['blancas']">
+                <div class="img" style="background-image: url(assets/images/bebidas/smirnoff.png);"></div>
+                <div class="desc pl-3">
+                    <div class="d-flex text align-items-center">
+                        <h3><span>{{item.nombre}}</span></h3>
+                        <span class="price">${{item.precio}}</span>
+                    </div>
+                    <div class="d-block">
+                        <p>A small river named Duden flows by their place and supplies</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="col-md-6">
+            <h3 class="mb-5 heading-pricing ftco-animate ftco-animated fadeInUp">Whisky's</h3>
+          
+            <div class="pricing-entry d-flex ftco-animate ftco-animated fadeInUp"  *ngFor="let item of productos['wiskys']">
+                <div class="img" style="background-image: url(assets/images/bebidas/jack.jpeg);"></div>
+                <div class="desc pl-3">
+                    <div class="d-flex text align-items-center">
+                        <h3><span>{{item.nombre}}</span></h3>
+                        <span class="price">${{item.precio}}</span>
+                    </div>
+                    <div class="d-block">
+                        <p>A small river named Duden flows by their place and supplies</p>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    </div>
+</section>

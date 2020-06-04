@@ -18,6 +18,10 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { BreveDescComponent } from './components/breve-desc/breve-desc.component';
 import { ServiciosComponent } from './components/servicios/servicios.component';
 import { OfertasComponent } from './components/ofertas/ofertas.component';
+import { ServicesComponent } from './pages/services/services.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+//Material
 
 
 @NgModule({
@@ -33,13 +37,15 @@ import { OfertasComponent } from './components/ofertas/ofertas.component';
     CarouselComponent,
     BreveDescComponent,
     ServiciosComponent,
-    OfertasComponent
+    OfertasComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CarouselModule
+    CarouselModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

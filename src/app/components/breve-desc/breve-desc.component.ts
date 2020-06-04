@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, Input } from '@angular/core';
 
 @Component({
   selector: 'app-breve-desc',
@@ -8,10 +8,12 @@ import { Component, OnInit, HostListener } from '@angular/core';
 })
 export class BreveDescComponent implements OnInit {
 
+  @Input() altura = 350;
+
   pos= false;
 
   @HostListener('window:scroll', ['$event']) onScrollEvent($event){
-    if (window.scrollY > 500){
+    if (window.scrollY > this.altura){
       this.pos= true;
     }
   }

@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, Input } from '@angular/core';
 
 @Component({
   selector: 'app-servicios',
@@ -7,10 +7,12 @@ import { Component, OnInit, HostListener } from '@angular/core';
   ]
 })
 export class ServiciosComponent implements OnInit {
+
+  @Input() altura = 1200;
   pos= false;
 
   @HostListener('window:scroll', ['$event']) onScrollEvent($event){
-    if (window.scrollY > 1200){
+    if (window.scrollY > this.altura){
       this.pos= true;
     }
   } 

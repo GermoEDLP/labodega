@@ -8,10 +8,10 @@ import { Component, OnInit, HostListener } from '@angular/core';
 })
 export class InfoComponent implements OnInit {
 
-  pos= false;
+  pos= true;
 
   @HostListener('window:scroll', ['$event']) onScrollEvent($event){
-    if (window.scrollY > 100){
+    if (window.scrollY > 10){
       this.pos= true;
     }
   } 
