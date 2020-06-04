@@ -8,7 +8,7 @@ import { Component, OnInit, HostListener, Input } from '@angular/core';
 })
 export class BreveDescComponent implements OnInit {
 
-  @Input() altura = 350;
+  @Input() altura = 400;
 
   pos= false;
 

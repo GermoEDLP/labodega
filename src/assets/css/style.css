@@ -4,7 +4,7 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+ :root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -60,7 +60,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: grey !important;
   text-align: left;
   background-color: #fff; }
 
@@ -3240,7 +3240,6 @@ input[type="button"].btn-block {
   display: block; }
 
 .navbar {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7306,17 +7305,16 @@ h1, h2, h3, h4, h5,
   color: #c49b63 !important; }
 
 .ftco-navbar-light {
-  background: transparent ;
-  background-color: rgba(0, 0, 0, 0.25) ;
+  background: transparent !important;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 3;
-  }
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
   @media (max-width: 991.98px) {
     .ftco-navbar-light {
-      background: #000 !important;
+      background-color: #000 !important;
       position: relative;
       top: 0; } }
   .ftco-navbar-light .navbar-brand {
@@ -7345,7 +7343,7 @@ h1, h2, h3, h4, h5,
         padding-right: 20px;
         color: rgba(255, 255, 255, 0.9); } }
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover, .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:focus {
-      color: #c49b63; font-size: 14px; }
+      color: #c49b63; }
       .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover:after, .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:focus:after {
         opacity: 1; }
   .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu {

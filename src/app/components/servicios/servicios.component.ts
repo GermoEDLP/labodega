@@ -8,7 +8,7 @@ import { Component, OnInit, HostListener, Input } from '@angular/core';
 })
 export class ServiciosComponent implements OnInit {
 
-  @Input() altura = 1200;
+  @Input() altura = 1050;
   pos= false;
 
   @HostListener('window:scroll', ['$event']) onScrollEvent($event){

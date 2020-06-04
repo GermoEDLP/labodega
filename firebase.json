@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/labodega",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

@@ -1,9 +1,11 @@
 #ftco-navbar{
-    background-color: rgba(0, 0, 0, 0.25) ;
+    background-color: rgba(0, 0, 0, 0.25) !important;
+    position: absolute;
 }
 
-.awake{
+#ftco-navbar.awake.scrolled{
     background-color: #151111 !important;
+    position: fixed !important;
 }
 
 
