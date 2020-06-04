@@ -1,0 +1,28 @@
+.carousel-caption{
+    top: 400px;
+    text-align: left;
+}
+
+.carousel-caption h5{
+    font-size: 50px;
+}
+
+@media(max-width: 950px){
+    .carousel-caption{
+        top: 200px;
+        text-align: left;
+    }
+    .carousel-caption h5{
+        font-size: 25px;
+    }
+}
+@media(max-width: 450px){
+    .carousel-caption{
+        top: 40px;
+        text-align: left;
+    }
+    
+    .carousel-caption h5{
+        font-size: 20px;
+    }
+}
